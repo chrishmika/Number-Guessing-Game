@@ -53,7 +53,7 @@ body {
   font-weight: bold;
 }
 
-.userGuessEnterField,
+#userGuessEnterField,
 .userNameEnterField {
   /* min-width: 285px; */
   width: min-content;
@@ -195,7 +195,7 @@ li {
   justify-content: center;
 }
 
-.userGuessEnterField {
+#userGuessEnterField {
   text-align: center;
 }
 

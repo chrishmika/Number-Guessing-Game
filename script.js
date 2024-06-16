@@ -1,4 +1,5 @@
 var chanceCount = 10;
+var secretNumber = 0;
 
 function getPlayerName() {
   const userName = document.querySelector(".userNameEnterField");
@@ -14,6 +15,7 @@ function playButtonFunction() {
   const chances = document.getElementById("chancesCountOnGame");
   chanceCount = 10;
   chances.innerHTML = chanceCount;
+  secretNumber = Math.floor(Math.random() * 100) + 1;
 }
 
 function guessBtnFunction() {
@@ -21,10 +23,33 @@ function guessBtnFunction() {
   const chances = document.getElementById("chancesCountOnGame");
   chanceCount--;
   chances.innerHTML = chanceCount;
+  const gameDisplay = document.getElementById("displayStatus");
+  const userNumber = Number(document.getElementById("userGuessEnterField").value);
+
   if (chanceCount <= 0) {
-    const gameDisplay = document.getElementById("displayStatus");
-    gameDisplay.innerHTML = "Game Over!<br /> You Lost";
+    gameDisplay.innerHTML = "Game Over!<br />it's " + secretNumber + "<br /> You Lost";
+  } else if (secretNumber < userNumber) {
+    gameDisplay.innerHTML = "lower Guess again";
+  } else if (secretNumber > userNumber) {
+    gameDisplay.innerHTML = "heigher Guess again";
+  } else if (secretNumber == userNumber) {
+    gameDisplay.innerHTML = "You won";
+  } else {
+    gameDisplay.innerHTML = "Enter valid number!";
+    chanceCount++;
+    chances.innerHTML = chanceCount;
   }
+}
+
+function tryAgainBtnFunction() {
+  secretNumber = Math.floor(Math.random() * 100) + 1;
+
+  const gameDisplay = document.getElementById("displayStatus");
+  gameDisplay.innerHTML = "Let's start <br /> again";
+
+  const chances = document.getElementById("chancesCountOnGame");
+  chanceCount = 10;
+  chances.innerHTML = chanceCount;
 }
 
 // function changeName() {

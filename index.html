@@ -72,15 +72,15 @@
             </span>
           </div>
           <div class="gameStatusDisplayArea">
-            <span id="displayStatus" > too close</span>
+            <span id="displayStatus" > Let's start</span>
           </div>
           <div class="userGameControls">
-            <input type="text" class="userGuessEnterField" placeholder="0" /> 
+            <input type="text" id="userGuessEnterField" placeholder="0" /> 
           </div>
 
           <div class="controlBtnsArea">
             <button class="submitUserGuessBtn" onClick="guessBtnFunction()">Guess</button>
-            <button class="tryAgainBtn">Try again</button>
+            <button class="tryAgainBtn" onclick="tryAgainBtnFunction()">Try again</button>
         </div>
 
           <br />
