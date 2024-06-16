@@ -1,5 +1,7 @@
 * {
   text-transform: capitalize;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }
 
 body {
@@ -12,7 +14,6 @@ body {
   min-height: 75vh;
   display: flex;
   overflow: hidden;
-  /* justify-content: 100px; */
 }
 
 /* .outLineArea {
@@ -21,6 +22,7 @@ body {
 } */
 
 .container {
+  /* scroll-behavior: smooth; */
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   padding: 50px 100px 50px 10px;
@@ -31,14 +33,22 @@ body {
   min-width: 50vw;
   max-width: 50vw;
   min-height: 5vh;
-  max-height: 35vh;
+  /* max-height: 75vh; */
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  transition-duration: 0.25s;
 }
 .userInfo {
   display: none;
+  /* this is needed for toggle */
   padding-left: 50px;
-  background-color: darkgray;
+  /* background-color: darkgray; */
+}
+
+.gameTitle {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
 }
 
 .userGuessEnterField,
@@ -80,18 +90,31 @@ body {
 }
 
 .howToPlay {
-  display: none;
-  background-color: chartreuse;
+  /* display: none; */
+  /* background-color: rgba(254, 254, 254, 0.055);
+  border: 1px solid transparent white; */
 }
 
 .gameInfo {
+  padding: 25px 50px 0px 15px;
+  text-align: justify;
+  text-wrap: balance;
+}
+li {
+  font-size: 17px;
+  color: white;
 }
 
 .playGameBtn {
+  display: flex;
+  /* margin-left: 50px; */
+  justify-content: center;
+  align-items: center;
+  transform: translateX(25px);
 }
 
 .gameDisplay {
-  /* display: none; */
+  display: none;
   background-color: rgb(148, 145, 133);
   padding: 20px;
 }
