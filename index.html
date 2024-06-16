@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,21 +11,21 @@
     <!-- <div class="outLineArea"> -->
       <div class="container">
 
-        <div class="userInfo">
+        <div id="userInfo" >
             <span class="gameTitle">Guess the number game</span> 
             <hr>
             <div class="nameInputDiv">
-                <input type="text" class="userNameEnterField" placeholder="Enter Your name" /><br />
+                <input type="text" class="userNameEnterField" placeholder="Enter Your name" value="hihsdfhsdof"/><br />
 
             </div>
           <div class="userInfoBtns">
-            <button class="nameEnterBtn">Submit Info</button>
-            <button class="howToPlayBtn">Help</button>
+            <button class="nameEnterBtn" onClick="getPlayerName()">Submit Info</button>
+            <button class="howToPlayBtn" id="ss" onClick="goToHowToPlay()">Help</button>
           </div>
           
         </div>
 
-        <div class="howToPlay">
+        <div id="howToPlay">
             <p class="gameInfo">
                 <ul>
                     <li>
@@ -57,28 +57,29 @@
                     </li>
                 </ul>
             <br />
-            <button class="playGameBtn">Play Game</button>
+            <button class="playGameBtn" onclick="playButtonFunction()">Play Game</button>
           </p>
           <br />
         </div>
 
-        <div class="gameDisplay">
+        <div id="gameDisplay">
           <div class="userInfoShowField">
-            <span class="showNameOnGame">Name : shehan</span>
+            Name :
+            <span id="showNameOnGame"></span>
             <span class="showChancesOnGame">
               Chances :
-              <span class="chancesCountOnGame"> 10 </span>
+              <span id="chancesCountOnGame"></span>
             </span>
           </div>
           <div class="gameStatusDisplayArea">
-            too close
+            <span id="displayStatus" > too close</span>
           </div>
           <div class="userGameControls">
-            <input type="text" class="userGuessEnterField" /> 
+            <input type="text" class="userGuessEnterField" placeholder="0" /> 
           </div>
 
           <div class="controlBtnsArea">
-            <button class="submitUserGuessBtn">Guess</button>
+            <button class="submitUserGuessBtn" onClick="guessBtnFunction()">Guess</button>
             <button class="tryAgainBtn">Try again</button>
         </div>
 

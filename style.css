@@ -39,7 +39,8 @@ body {
   transition-duration: 0.25s;
 }
 
-.userInfo {
+/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
+#userInfo {
   display: none;
   /* this is needed for toggle */
   padding-left: 50px;
@@ -108,8 +109,9 @@ body {
   cursor: pointer;
 }
 
-.howToPlay {
-  display: none;
+/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
+#howToPlay {
+  /* display: none; */
   /* background-color: rgba(254, 254, 254, 0.055);
   border: 1px solid transparent white; */
 }
@@ -122,6 +124,13 @@ body {
   text-align: justify;
   text-wrap: balance;
 } */
+
+ul {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 
 li {
   max-width: 500px;
@@ -139,9 +148,9 @@ li {
   border: 1px solid white;
 }
 
-.gameDisplay {
+/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
+#gameDisplay {
   color: white;
-  /* display: none; */
   /* background-color: rgb(148, 145, 133); */
   padding: 20px;
 }
