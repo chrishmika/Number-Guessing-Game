@@ -155,6 +155,10 @@ li {
   padding: 20px;
 }
 
+.displayStatus {
+  transition-duration: 0.2;
+}
+
 .userInfoShowField {
   /* background-color: chocolate; */
 }

@@ -29,9 +29,9 @@ function guessBtnFunction() {
   if (chanceCount <= 0) {
     gameDisplay.innerHTML = "Game Over!<br />it's " + secretNumber + "<br /> You Lost";
   } else if (secretNumber < userNumber) {
-    gameDisplay.innerHTML = "lower Guess again";
+    gameDisplay.innerHTML = "lower ";
   } else if (secretNumber > userNumber) {
-    gameDisplay.innerHTML = "heigher Guess again";
+    gameDisplay.innerHTML = "heigher";
   } else if (secretNumber == userNumber) {
     gameDisplay.innerHTML = "You won";
   } else {
