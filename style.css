@@ -1,0 +1,129 @@
+* {
+  text-transform: capitalize;
+}
+
+body {
+  display: flex;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: auto;
+  align-items: center;
+  min-height: 75vh;
+  display: flex;
+  overflow: hidden;
+  /* justify-content: 100px; */
+}
+
+/* .outLineArea {
+  background-color: aqua;
+  height: 500px;
+} */
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  padding: 50px 100px 50px 10px;
+  margin-left: 0px;
+  display: flex;
+  justify-content: center; /* Horizontal alignment */
+  align-items: center;
+  min-width: 50vw;
+  max-width: 50vw;
+  min-height: 5vh;
+  max-height: 35vh;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.userInfo {
+  display: none;
+  padding-left: 50px;
+  background-color: darkgray;
+}
+
+.userGuessEnterField,
+.userNameEnterField {
+  width: 285px;
+  height: 45px;
+  margin: 20px 0px 20px 0px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 15px;
+  font-size: 20px;
+  text-align: end;
+}
+
+.howToPlayBtn,
+.nameEnterBtn,
+.playGameBtn,
+.tryAgainBtn,
+.submitUserGuessBtn {
+  letter-spacing: 0.5px;
+  border-radius: 15px;
+  font-size: medium;
+  outline: none;
+  border: none;
+  height: 45px;
+  width: 150px;
+}
+
+.howToPlayBtn:hover,
+.nameEnterBtn:hover,
+.playGameBtn:hover,
+.tryAgainBtn:hover,
+.submitUserGuessBtn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.howToPlay {
+  display: none;
+  background-color: chartreuse;
+}
+
+.gameInfo {
+}
+
+.playGameBtn {
+}
+
+.gameDisplay {
+  /* display: none; */
+  background-color: rgb(148, 145, 133);
+  padding: 20px;
+}
+
+.userInfoShowField {
+  background-color: chocolate;
+}
+.gameStatusDisplayArea {
+  background-color: darkcyan;
+}
+
+.showNameOnGame {
+  /* padding-left: 10px; */
+}
+
+.showChancesOnGame {
+  float: right;
+  /* padding: 0px 10px 0px 10px; */
+}
+
+.chancesCountOnGame {
+}
+
+.userGameControls {
+  background-color: darkolivegreen;
+}
+
+.userGuessEnterField {
+}
+
+.submitUserGuessBtn {
+}
+
+.tryAgainBtn {
+}
