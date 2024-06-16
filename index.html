@@ -10,19 +10,26 @@
   <body>
     <div class="outLineArea">
       <div class="container">
+
         <div class="userInfo">
             <span class="gameTitle">Guess the number game</span> 
             <hr>
-          <input type="text" class="userNameEnterField" placeholder="Enter Your name" /><br />
-          <button class="nameEnterBtn">Submit Info</button>
-          <button class="howToPlayBtn">HowToPlay</button>
+            <div class="nameInputDiv">
+                <input type="text" class="userNameEnterField" placeholder="Enter Your name" /><br />
+
+            </div>
+          <div class="userInfoBtns">
+            <button class="nameEnterBtn">Submit Info</button>
+            <button class="howToPlayBtn">Help</button>
+          </div>
+          
         </div>
 
         <div class="howToPlay">
             <p class="gameInfo">
                 <ul>
                     <li>
-                        Your computer is thinking about a number.<br /><br />    
+                        Your computer is thinking about a number between 0 to 100.<br /><br />    
                     </li>
                     
                     <li>
@@ -63,14 +70,17 @@
               <span class="chancesCountOnGame"> 10 </span>
             </span>
           </div>
-          <div class="gameStatusDisplayArea">too close</div>
-          <div class="userGameControls">
-            <input type="text" class="userGuessEnterField" />
-            <br />
-            <button class="submitUserGuessBtn">Guess</button>
-
-            <button class="tryAgainBtn">Try again</button>
+          <div class="gameStatusDisplayArea">
+            too close
           </div>
+          <div class="userGameControls">
+            <input type="text" class="userGuessEnterField" /> 
+          </div>
+
+          <div class="controlBtnsArea">
+            <button class="submitUserGuessBtn">Guess</button>
+            <button class="tryAgainBtn">Try again</button>
+        </div>
 
           <br />
         </div>

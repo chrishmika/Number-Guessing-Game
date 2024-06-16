@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto;
   align-items: center;
-  min-height: 75vh;
+  min-height: 100vh;
   display: flex;
   overflow: hidden;
 }
@@ -38,6 +38,7 @@ body {
   border-bottom-right-radius: 15px;
   transition-duration: 0.25s;
 }
+
 .userInfo {
   display: none;
   /* this is needed for toggle */
@@ -53,9 +54,13 @@ body {
 
 .userGuessEnterField,
 .userNameEnterField {
-  width: 285px;
+  /* min-width: 285px; */
+  width: min-content;
+  /* display: flex;
+  justify-items: center;
+  justify-content: center; */
   height: 45px;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px 10px 0px;
   border: none;
   outline: none;
   border-radius: 15px;
@@ -63,6 +68,16 @@ body {
   padding-right: 15px;
   font-size: 20px;
   text-align: end;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInfoBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .howToPlayBtn,
@@ -77,6 +92,10 @@ body {
   border: none;
   height: 45px;
   width: 150px;
+  margin-bottom: 10px;
+  background: none;
+  color: white;
+  text-wrap: nowrap;
 }
 
 .howToPlayBtn:hover,
@@ -90,45 +109,63 @@ body {
 }
 
 .howToPlay {
-  /* display: none; */
+  display: none;
   /* background-color: rgba(254, 254, 254, 0.055);
   border: 1px solid transparent white; */
 }
 
-.gameInfo {
+/* .gameInfo {
+  max-width: 10px;
+  display: flex;
+  position: relative;
   padding: 25px 50px 0px 15px;
   text-align: justify;
   text-wrap: balance;
-}
+} */
+
 li {
+  max-width: 500px;
   font-size: 17px;
   color: white;
 }
 
 .playGameBtn {
   display: flex;
+  font-size: 25px;
   /* margin-left: 50px; */
   justify-content: center;
   align-items: center;
-  transform: translateX(25px);
+  transform: translateX(30px);
+  border: 1px solid white;
 }
 
 .gameDisplay {
-  display: none;
-  background-color: rgb(148, 145, 133);
+  color: white;
+  /* display: none; */
+  /* background-color: rgb(148, 145, 133); */
   padding: 20px;
 }
 
 .userInfoShowField {
-  background-color: chocolate;
-}
-.gameStatusDisplayArea {
-  background-color: darkcyan;
+  /* background-color: chocolate; */
 }
 
-.showNameOnGame {
-  /* padding-left: 10px; */
+.gameStatusDisplayArea {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 40px;
+  transform: 0.5s;
+  transition-duration: 0.5s;
 }
+
+/* .showNameOnGame {
+  float: left;
+} */
 
 .showChancesOnGame {
   float: right;
@@ -138,14 +175,39 @@ li {
 .chancesCountOnGame {
 }
 
+.nameInputDiv {
+  display: flex;
+  justify-content: center;
+}
+
 .userGameControls {
-  background-color: darkolivegreen;
+  /* background-color: darkolivegreen; */
+  display: flex;
+  justify-content: center;
 }
 
 .userGuessEnterField {
+  text-align: center;
 }
 
-.submitUserGuessBtn {
+.controlBtnsArea {
+  /* background-color: aquamarine; */
+  display: flex;
+  /* position: absolute; */
+  justify-content: center;
+  align-items: center;
+}
+
+.submitUserGuessBtn,
+.tryAgainBtn {
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+  margin-bottom: 10px;
+  /* max-width: 150px; */
+  background: none;
+  color: white;
+  font-size: 20px;
 }
 
 .tryAgainBtn {
