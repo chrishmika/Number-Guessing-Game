@@ -1,4 +1,3 @@
-function(){
-    const userName = document.getElementsByClassName("").value;
-
+function getPlayerName() {
+  const userName = document.getElementsByClassName(".userNameEnterField").value;
 }
