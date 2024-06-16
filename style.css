@@ -201,10 +201,10 @@ li {
 .submitUserGuessBtn,
 .tryAgainBtn {
   /* display: flex; */
-  align-items: center;
   /* justify-content: center; */
-  margin-bottom: 10px;
   /* max-width: 150px; */
+  align-items: center;
+  margin-bottom: 10px;
   background: none;
   color: white;
   font-size: 20px;
