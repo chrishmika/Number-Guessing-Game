@@ -1,16 +1,15 @@
 var chanceCount = 10;
 var secretNumber = 0;
 
-function getPlayerName() {
-  const userName = document.querySelector(".userNameEnterField");
-  console.log(userName);
-}
-
 function playButtonFunction() {
   const userName = document.querySelector(".userNameEnterField").value;
   console.log(userName);
   const user = document.getElementById("showNameOnGame");
   user.innerHTML = userName;
+
+  document.getElementById("userInfo").style.display = "none";
+  document.getElementById("gameDisplay").style.display = "block";
+  document.getElementById("howToPlay").style.display = "none";
 
   const chances = document.getElementById("chancesCountOnGame");
   chanceCount = 10;
@@ -25,17 +24,22 @@ function guessBtnFunction() {
   chances.innerHTML = chanceCount;
   const gameDisplay = document.getElementById("displayStatus");
   const userNumber = Number(document.getElementById("userGuessEnterField").value);
-
-  if (chanceCount <= 0) {
-    gameDisplay.innerHTML = "Game Over!<br />it's " + secretNumber + "<br /> You Lost";
-  } else if (secretNumber < userNumber) {
-    gameDisplay.innerHTML = "lower ";
-  } else if (secretNumber > userNumber) {
-    gameDisplay.innerHTML = "heigher";
-  } else if (secretNumber == userNumber) {
-    gameDisplay.innerHTML = "You won";
+  if (userNumber != "") {
+    if (chanceCount <= 0) {
+      gameDisplay.innerHTML = "Game Over!<br />it's " + secretNumber + "<br /> You Lost";
+    } else if (secretNumber < userNumber) {
+      gameDisplay.innerHTML = "lower ";
+    } else if (secretNumber > userNumber) {
+      gameDisplay.innerHTML = "heigher";
+    } else if (secretNumber == userNumber) {
+      gameDisplay.innerHTML = "You won";
+    } else {
+      gameDisplay.innerHTML = "invalid!";
+      chanceCount++;
+      chances.innerHTML = chanceCount;
+    }
   } else {
-    gameDisplay.innerHTML = "Enter valid number!";
+    gameDisplay.innerHTML = "invalid!";
     chanceCount++;
     chances.innerHTML = chanceCount;
   }
@@ -52,16 +56,7 @@ function tryAgainBtnFunction() {
   chances.innerHTML = chanceCount;
 }
 
-// function changeName() {
-//   const user = document.getElementById("showNameOnGame");
-//   user.innerHTML = userName;
-// }
-
-// function goToHowToPlay() {
-//   const howToPlayPage = document.getElementsByClassName("userInfo").display.value;
-//   //   howToPlayPage.style.display = "hidden";
-
-//   //   howToPlayPage.style.color = "red";
-//   console.log("yes");
-//   console.log(howToPlayPage);
-// }
+function goToHowToPlay() {
+  document.getElementById("userInfo").style.display = "none";
+  document.getElementById("howToPlay").style.display = "block";
+}

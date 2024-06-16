@@ -8,6 +8,7 @@ body {
   display: flex;
   background-image: url("./assets/background.jpg");
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: auto;
   align-items: center;
@@ -16,35 +17,25 @@ body {
   overflow: hidden;
 }
 
-/* .outLineArea {
-  background-color: aqua;
-  height: 500px;
-} */
-
 .container {
-  /* scroll-behavior: smooth; */
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   padding: 50px 100px 50px 10px;
   margin-left: 0px;
   display: flex;
-  justify-content: center; /* Horizontal alignment */
+  justify-content: center;
   align-items: center;
   min-width: 50vw;
   max-width: 50vw;
   min-height: 5vh;
-  /* max-height: 75vh; */
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   transition-duration: 0.25s;
 }
 
-/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
 #userInfo {
-  display: none;
-  /* this is needed for toggle */
+  display: block;
   padding-left: 50px;
-  /* background-color: darkgray; */
 }
 
 .gameTitle {
@@ -55,11 +46,7 @@ body {
 
 #userGuessEnterField,
 .userNameEnterField {
-  /* min-width: 285px; */
   width: min-content;
-  /* display: flex;
-  justify-items: center;
-  justify-content: center; */
   height: 45px;
   margin: 20px 0px 10px 0px;
   border: none;
@@ -109,21 +96,9 @@ body {
   cursor: pointer;
 }
 
-/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
 #howToPlay {
-  /* display: none; */
-  /* background-color: rgba(254, 254, 254, 0.055);
-  border: 1px solid transparent white; */
+  display: none;
 }
-
-/* .gameInfo {
-  max-width: 10px;
-  display: flex;
-  position: relative;
-  padding: 25px 50px 0px 15px;
-  text-align: justify;
-  text-wrap: balance;
-} */
 
 ul {
   border: 1px solid black;
@@ -141,26 +116,20 @@ li {
 .playGameBtn {
   display: flex;
   font-size: 25px;
-  /* margin-left: 50px; */
   justify-content: center;
   align-items: center;
   transform: translateX(30px);
   border: 1px solid white;
 }
 
-/* dgjdfhjtdhkjshgkjfghkdjfghdkjfghkdfjhgkdjfhgdkfjhgkjdhdghfghy */
 #gameDisplay {
+  display: none;
   color: white;
-  /* background-color: rgb(148, 145, 133); */
   padding: 20px;
 }
 
 .displayStatus {
   transition-duration: 0.2;
-}
-
-.userInfoShowField {
-  /* background-color: chocolate; */
 }
 
 .gameStatusDisplayArea {
@@ -176,16 +145,8 @@ li {
   transition-duration: 0.5s;
 }
 
-/* .showNameOnGame {
-  float: left;
-} */
-
 .showChancesOnGame {
   float: right;
-  /* padding: 0px 10px 0px 10px; */
-}
-
-.chancesCountOnGame {
 }
 
 .nameInputDiv {
@@ -194,7 +155,6 @@ li {
 }
 
 .userGameControls {
-  /* background-color: darkolivegreen; */
   display: flex;
   justify-content: center;
 }
@@ -204,24 +164,16 @@ li {
 }
 
 .controlBtnsArea {
-  /* background-color: aquamarine; */
   display: flex;
-  /* position: absolute; */
   justify-content: center;
   align-items: center;
 }
 
 .submitUserGuessBtn,
 .tryAgainBtn {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* max-width: 150px; */
   align-items: center;
   margin-bottom: 10px;
   background: none;
   color: white;
   font-size: 20px;
-}
-
-.tryAgainBtn {
 }

@@ -8,18 +8,17 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <!-- <div class="outLineArea"> -->
       <div class="container">
 
         <div id="userInfo" >
             <span class="gameTitle">Guess the number game</span> 
             <hr>
             <div class="nameInputDiv">
-                <input type="text" class="userNameEnterField" placeholder="Enter Your name" value="hihsdfhsdof"/><br />
+                <input type="text" class="userNameEnterField" placeholder="Enter Your name" value=""/><br />
 
             </div>
           <div class="userInfoBtns">
-            <button class="nameEnterBtn" onClick="getPlayerName()">Submit Info</button>
+            <button class="nameEnterBtn" onClick="playButtonFunction()">Submit Info</button>
             <button class="howToPlayBtn" id="ss" onClick="goToHowToPlay()">Help</button>
           </div>
           
@@ -75,7 +74,7 @@
             <span id="displayStatus" > Let's start</span>
           </div>
           <div class="userGameControls">
-            <input type="text" id="userGuessEnterField" placeholder="0" /> 
+            <input type="text" id="userGuessEnterField" placeholder="0" value=""/> 
           </div>
 
           <div class="controlBtnsArea">
@@ -86,6 +85,5 @@
           <br />
         </div>
       </div>
-    <!-- </div> -->
   </body>
 </html>
